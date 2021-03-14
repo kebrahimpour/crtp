@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(cpp_template)
+project(CRTP)
 include(FetchContent)
 
 FetchContent_Declare(
@@ -17,9 +17,13 @@ if(NOT googletest_POPULATED)
     add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BINARY_DIR})
 endif()
 
+add_executable(Main source/main.cpp source/main.cpp)
 
+add_executable(simple source/simpleExample.cpp)
 
-add_executable(${PROJECT_NAME} source/main.cpp source/main.cpp)
+target_include_directories(simple
+        PUBLIC
+        ${CMAKE_CURRENT_LIST_DIR}/include)
 
 
 add_subdirectory(test)
