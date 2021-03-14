@@ -1,6 +1,3 @@
-//
-// Created by keyvan on 3/13/21.
-//
 #ifndef CRTP_SIMPLEEXAMPLE_H
 #define CRTP_SIMPLEEXAMPLE_H
 template <typename D>

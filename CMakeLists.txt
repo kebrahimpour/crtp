@@ -25,5 +25,10 @@ target_include_directories(simple
         PUBLIC
         ${CMAKE_CURRENT_LIST_DIR}/include)
 
+add_executable(addfun source/AddFunctionality.cpp )
+
+target_include_directories(simple
+        PUBLIC
+        ${CMAKE_CURRENT_LIST_DIR}/include)
 
 add_subdirectory(test)
